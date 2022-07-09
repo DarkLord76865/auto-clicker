@@ -1,1 +1,1 @@
-# auto-clicker
+# Auto-Clicker
