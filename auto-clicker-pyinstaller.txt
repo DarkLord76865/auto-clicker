@@ -1,1 +1,0 @@
-pyinstaller "auto-clicker-v11.py" --upx-dir "_upx_dir_path_" --noconsole --icon "auto-clicker-icon.ico" --onefile --add-data "auto-clicker-icon.ico;." --clean --key "_key_" --name "Auto-Clicker-v11"
