@@ -1,11 +1,8 @@
 # Auto-Clicker
 
-A simple program that clicks automatically. Fully portable with GUI.
+A simple program that automatically clicks.
+Can help with repetitive tasks (like continuously refreshing webpage, collecting stuff in games, ...).
 
-Helps with repetitive tasks (continuously refreshing webpage, collecting stuff in games, ...)
-
-
-![screenshot](https://user-images.githubusercontent.com/40371578/178150022-51d95899-31da-480e-98c9-71bca39bc95d.png)
 
 
 
@@ -14,6 +11,8 @@ Prebuilt program is available under Releases
 
 ## Building
 1. Clone repository
-2. Run command: `pip install -r requirements.txt`
-3. Run build.py
-4. Built `*.exe` will be placed in the same folder
+2. Install Python
+3. Install dependencies: `pip install -r requirements.txt`
+4. Install UPX (optional)
+5. Run build.py
+6. Built `*.exe` will be placed in the same folder

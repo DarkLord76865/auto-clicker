@@ -2,7 +2,7 @@ import os
 import sys
 import time
 from multiprocessing import Process, freeze_support
-from tkinter import *
+import tkinter
 
 import mouse
 import psutil
@@ -65,27 +65,25 @@ def main():
 	global process_clicker
 	global ent, status, root
 
-	root = Tk()
+	root = tkinter.Tk()
 	root.title("Auto-Clicker")
 	root.geometry(f"250x120+{root.winfo_screenwidth() // 2 - 125}+{root.winfo_screenheight() // 2 - 60}")
 	root.resizable(False, False)
 	root.configure(background="#ffffff")
-	root.iconbitmap(resource_path("data/auto-clicker-icon.ico"))
+	root.iconbitmap(resource_path("resources/click-icon.ico"))
 
-	title = Label(root, background="#ffffff", activebackground="#ffffff", foreground="#000000", activeforeground="#000000", text="Auto-Clicker", font=("Helvetica", 25, "italic", "bold"))
+	title = tkinter.Label(root, background="#ffffff", activebackground="#ffffff", foreground="#000000", activeforeground="#000000", text="Auto-Clicker", font=("Helvetica", 25, "italic", "bold"))
 	title.place(x=0, y=0, width=250, height=65)
-	creator = Label(root, background="#ffffff", activebackground="#ffffff", text="DarkLord76865", foreground="grey90", activeforeground="#000000", font=("Helvetica", 8, "italic"))
-	creator.place(x=170, y=0, width=80, height=10)
-	instructions = Label(root, background="#ffffff", activebackground="#ffffff", text="Click middle mouse button to start / stop", foreground="#000000", activeforeground="#000000", font=("Helvetica", 8, "italic"))
+	instructions = tkinter.Label(root, background="#ffffff", activebackground="#ffffff", text="Click middle mouse button to start / stop", foreground="#000000", activeforeground="#000000", font=("Helvetica", 8, "italic"))
 	instructions.place(x=0, y=95, width=250, height=25)
 
-	interv_text = Label(root, background="#ffffff", activebackground="#ffffff", text="Interval (seconds): ", foreground="#000000", activeforeground="#000000", font=("Helvetica", 10, "italic"))
+	interv_text = tkinter.Label(root, background="#ffffff", activebackground="#ffffff", text="Interval (seconds): ", foreground="#000000", activeforeground="#000000", font=("Helvetica", 10, "italic"))
 	interv_text.place(x=5, y=65, width=115, height=25)
 	reg = root.register(validate_input)
-	ent = Entry(root, justify=CENTER, validate="key", validatecommand=(reg, "%P"), background="grey90", foreground="#000000", highlightthickness=0, borderwidth=0, font=("Helvetica", 11))
+	ent = tkinter.Entry(root, justify=tkinter.CENTER, validate="key", validatecommand=(reg, "%P"), background="grey90", foreground="#000000", highlightthickness=0, borderwidth=0, font=("Helvetica", 11))
 	ent.insert(0, "3")
 	ent.place(x=120, y=67, width=55, height=21)
-	status = Label(root, background="#ffffff", activebackground="#ffffff", text="Inactive", foreground="red", activeforeground="red", font=("Helvetica", 10, "italic", "bold"))
+	status = tkinter.Label(root, background="#ffffff", activebackground="#ffffff", text="Inactive", foreground="red", activeforeground="red", font=("Helvetica", 10, "italic", "bold"))
 	status.place(x=175, y=65, width=75, height=25)
 
 	mouse.on_button(start, buttons=(mouse.MIDDLE,), types=(mouse.UP,))
