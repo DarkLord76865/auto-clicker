@@ -4,6 +4,7 @@ A simple program that automatically clicks.
 Can help with repetitive tasks (like continuously refreshing webpage, collecting stuff in games, ...).
 
 
+![screenshot](https://github.com/amamic1803/Auto-Clicker/assets/40371578/47f4ca1c-8b40-4301-8117-a13c122beb40)
 
 
 ## Downloading
